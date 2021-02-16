@@ -9,6 +9,3 @@ Be sure you have Node.js (LTS) and Angular CLI already installed.
 
 Inside the project folder run `npm install` and then `ng serve` to create a server.
 Finally go to http://localhost:4200/ to open and start using the app.
-
-## Screenshots
-
