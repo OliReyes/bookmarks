@@ -1,0 +1,18 @@
+.bookmarks{
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+.bookmarks_list{
+    max-width: 600px;
+    width: 300px;
+}
+
+.bookmarks_add .mat-form-field + .mat-form-field,
+.bookmarks_add .bookmarks_add_button {
+    margin-left: 8px;
+}
+
+.bookmarks_add{
+    margin-top: 25px;
+}

@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="bookmarks">
+    <div class="bookmarks_list">
+      <h1>Bookmarks <mat-icon color="primary">bookmarks</mat-icon></h1>
+
+      <mat-list *ngFor="let bookmarkGroups of bookmarkItems | async | keyvalue">
+
+        <div mat-subheader>{{bookmarkGroups.key}}</div>
+        <mat-list-item *ngFor="let bookmark of bookmarkGroups.value">
+          <mat-icon color="primary" mat-list-icon>bookmark</mat-icon>
+          <div mat-line>{{ bookmark.name }}</div>
+          <a target="_blank" mat-line href="{{bookmark.url}}"> Go to website </a>
+          <button (click)="deleteItem(bookmark.id)" mat-icon-button color="primary" aria-label="delete">
+            <mat-icon (click)="deleteItem(bookmark.id)" color="primary">delete</mat-icon>
+          </button>
+        </mat-list-item>
+
+        <!-- <mat-divider></mat-divider> -->
+        
+      </mat-list>
+
+    </div>
+
+    <form class="bookmarks_add" (ngSubmit)="addItem()">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="newBookmarkItem.name" name="itemName"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Url</mat-label>
+        <input matInput type="text" [(ngModel)]="newBookmarkItem.url" name="itemUrl"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Group</mat-label>
+        <input matInput type="text" [(ngModel)]="newBookmarkItem.group" name="itemGroup"/>
+      </mat-form-field>
+
+      <button class="bookmarks_add_button" mat-raised-button color="primary" type="submit">Add</button>
+    </form>
+
+    
+  </div>
+</div>
