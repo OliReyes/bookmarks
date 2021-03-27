@@ -1,6 +1,6 @@
 # Bookmarks
 
-A bookmarks app for Avaloq created with Angular 11, Angular Material and NGRX.
+A bookmarks app for Avaloq created with Angular 11, Angular Material and Ngrx.
 The app lists bookmarks elements grouped by category, you can delete and create new ones.
 
 ## How to run the project
